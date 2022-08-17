@@ -1797,6 +1797,492 @@
 					"method": "PATCH"
 				}
 			]
+		},
+		{
+			"endpoint": "/service-provider/service",
+			"method": "POST",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/service",
+					"encoding": "json",
+					"method": "POST"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/services-request",
+			"method": "POST",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/services-request",
+					"encoding": "json",
+					"method": "POST"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/sp/{typeId}/{timelineId}",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/sp/{typeId}/{timelineId}",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/customer/sp",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/customer/sp",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/customer/sp/{spCustomerId}",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/customer/sp/{spCustomerId}",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/services-request-sp",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/services-request-sp",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/services-request-initiator",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/services-request-initiator",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/send-proposal",
+			"method": "POST",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/send-proposal",
+					"encoding": "json",
+					"method": "POST"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/completejob/{id}",
+			"method": "POST",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/completejob/{id}",
+					"encoding": "json",
+					"method": "POST"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/approve-proposal/{id}",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/approve-proposal/{id}",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/reject-proposal/{id}",
+			"method": "DELETE",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/reject-proposal/{id}",
+					"encoding": "json",
+					"method": "DELETE"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/active-jobs",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/active-jobs",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/completed-jobs",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/completed-jobs",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/specific-job/{id}",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/specific-job/{id}",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/service-types",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/service-types",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/service-type/domain",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/service-type/domain",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/service-type/options/{parentId}",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/service-type/options/{parentId}",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/service-provider/timelines",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/service-provider/timelines",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
 		}
 	]
 }
