@@ -1474,5 +1474,329 @@
 				}
 			]
 		},
+		{
+			"endpoint": "/property-management/property",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/property-management/property",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/property-management/properties",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/property-management/properties",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/property-management/properties/manager",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/property-management/properties/manager",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/property-management/properties/owner",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/property-management/properties/owner",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/property-management/property/{id}",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/property-management/property/{id}",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/property-management/property",
+			"method": "POST",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/property-management/property",
+					"encoding": "json",
+					"method": "POST"
+				}
+			]
+		},
+		{
+			"endpoint": "/property-management/properties",
+			"method": "POST",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/property-management/properties",
+					"encoding": "json",
+					"method": "POST"
+				}
+			]
+		},
+		{
+			"endpoint": "/property-management/property/{id}",
+			"method": "PATCH",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/property-management/property/{id}",
+					"encoding": "json",
+					"method": "PATCH"
+				}
+			]
+		},
+		{
+			"endpoint": "/property-management/property-types",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/property-management/property-types",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/property-management/property-type",
+			"method": "POST",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/property-management/property-type",
+					"encoding": "json",
+					"method": "POST"
+				}
+			]
+		},
+		{
+			"endpoint": "/property-management/tenant-property/{tenantId}",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/property-management/tenant-property/{tenantId}",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/property-management/tenant-property/{id}",
+			"method": "PATCH",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/property-management/tenant-property/{id}",
+					"encoding": "json",
+					"method": "PATCH"
+				}
+			]
+		}
 	]
 }
