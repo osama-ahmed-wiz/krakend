@@ -1367,7 +1367,7 @@
 			]
 		},
 		{
-			"endpoint": "/notification/notification",
+			"endpoint": "/notification/rental-payment",
 			"method": "POST",
 			"output_encoding": "json",
 			"extra_config": {
@@ -1392,6 +1392,87 @@
 					"method": "POST"
 				}
 			]
-		}
+		},
+		{
+			"endpoint": "/payment-processing/rental-payment",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/payment-processing/rental-payment",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"endpoint": "/payment-processing/rental-payment",
+			"method": "POST",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/payment-processing/rental-payment",
+					"encoding": "json",
+					"method": "POST"
+				}
+			]
+		},
+		{
+			"endpoint": "/payment-processing/transaction",
+			"method": "GET",
+			"output_encoding": "json",
+			"extra_config": {
+				"auth/validator": {
+					"alg": "RS256",
+					"jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+					"disable_jwk_security": false,
+					"issuer": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic",
+					"operation_debug": true,
+					"jwk_local_path":"./jwk.txt"
+				}
+			},
+			"input_headers": [
+				"Authorization",
+				"X-Authorization",
+				"R-Authorization"
+			],
+			"backend": [
+				{
+					"url_pattern": "/payment-processing/transaction",
+					"encoding": "json",
+					"method": "GET"
+				}
+			]
+		},
 	]
 }
