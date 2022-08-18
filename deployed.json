@@ -1,0 +1,91 @@
+{
+    "$schema": "https://www.krakend.io/schema/v3.json",
+    "version": 3,
+    "name": "KrakenD - API Gateway",
+    "timeout": "3000ms",
+    "cache_ttl": "300s",
+    "output_encoding": "json",
+    "endpoints": [
+      {
+        "endpoint": "/service",
+        "extra_config": {
+            "auth/validator": {
+                "alg": "RS256",
+                "jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+                "disable_jwk_security": false
+            }
+        },
+        "backend": [
+            {
+              "host":["http://ht-gateway-api-ht-project.apps.okd.oluoteslab.com"],
+              "url_pattern": "/"
+            }
+        ]
+      },
+      {
+        "endpoint": "/service/port",
+        "extra_config": {
+            "auth/validator": {
+                "alg": "RS256",
+                "jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+                "disable_jwk_security": false
+            }
+        },
+        "backend": [
+            {
+              "host":["ht-gateway-api-ht-project.apps.okd.oluoteslab.com:3000"],
+              "url_pattern": "/"
+            }
+        ]
+      },
+      {
+        "endpoint": "/user/users",
+        "method": "GET",
+        "output_encoding": "json",
+        "extra_config": {
+          "auth/validator": {
+            "alg": "RS256",
+            "jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+            "disable_jwk_security": false
+          }
+        },
+        "backend": [
+          {
+            "host": [
+              "http://ht-gateway-api-ht-project.apps.okd.oluoteslab.com",
+              "ht-gateway-api-ht-project.apps.okd.oluoteslab.com:3000"
+            ],
+            "url_pattern": "/user/users",
+            "encoding": "json",
+            "sd": "static",
+            "method": "GET",
+            "disable_host_sanitize": false
+          }
+        ]
+      },
+      {
+        "endpoint": "/test/user/users",
+        "method": "GET",
+        "output_encoding": "json",
+        "extra_config": {
+          "auth/validator": {
+            "alg": "RS256",
+            "jwk_url": "https://keycloak-infra-svc.apps.okd.oluoteslab.com/auth/realms/basic/protocol/openid-connect/certs",
+            "disable_jwk_security": false
+          }
+        },
+        "backend": [
+          {
+            "host": [
+              "ht-gateway-api-ht-project.apps.okd.oluoteslab.com:3000"
+            ],
+            "url_pattern": "/user/users",
+            "encoding": "json",
+            "sd": "static",
+            "method": "GET",
+            "disable_host_sanitize": false
+          }
+        ]
+      }
+    ]
+  }
